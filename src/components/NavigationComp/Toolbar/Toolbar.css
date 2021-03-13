@@ -17,6 +17,15 @@
     display: flex;
     align-items: center;
     height: 100%;
+    width:100%;
+    justify-content:space-between;
+}
+
+
+.toolbar_navigation2 {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .toolbar_logo {
@@ -85,6 +94,7 @@
     color: #f2f2f2;
 }
 
+
 .modalButton {
     height: 50px;
     width: 100px;
@@ -123,6 +133,17 @@
 
 }
 
+.toolbar_navigation_icons {
+    display: none;
+    align-items: center;
+    height: 50px;
+    
+
+}
+.toobar_icon {
+    color: white;
+    padding-left:8px;
+}
 
 /* not to show some items in nav bar */
 
@@ -132,6 +153,22 @@
     }
     .toolbar_btns {
         display: none;
+    }
+
+    .toolbar_navigation_icons {
+        display: flex;
+    }
+    .toolbar_btn_icons {
+        display: flex;
+    }
+
+    .mainToolBarSpanName {
+        display: none;
+
+    }
+
+    .spacer {
+        flex:2;
     }
     /* .toolBarSpanName {
         display: none;

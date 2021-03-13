@@ -1,9 +1,9 @@
 import React from 'react';
 import './Backdrop.css'
-import ContactInfo from '../ContactInfo/ContactInfo'
+// import ContactInfo from '../ContactInfo/ContactInfo'
 // import ButtonLinks from "../ButtonLinks/ButtonLinks"
 
-const backDropComp = props => {
+const BackDropComp = props => {
 
 return (
 <div className="backdrop_dms" onClick={props.canClose}>
@@ -11,4 +11,4 @@ return (
 )
 }
 
-export default backDropComp
+export default BackDropComp

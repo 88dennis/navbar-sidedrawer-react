@@ -3,6 +3,8 @@ import "./ButtonLinks.css";
 import iconHome from "../../images/cookie.png";
 import iconLinkedIn from "../../images/linkedin-icon-8.png";
 import iconGitHub from "../../images/githublogo.png";
+
+
 import { Link } from "react-router-dom";
 
 const buttonLinks = (props) => (
@@ -12,11 +14,11 @@ const buttonLinks = (props) => (
         {/* FROM PAGELINKS */}
         {props.children}
 
-        <button className="buttonLinksbtn">
+        {/* <button className="buttonLinksbtn">
           <Link to="/HomePage">
             <img className="iconsimg" src={iconHome} alt="cookie.png" />
           </Link>
-        </button>
+        </button> */}
   
         <button className="buttonLinksbtn">
           <a

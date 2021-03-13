@@ -33,7 +33,7 @@ const NavigationComp = (props) => {
   let landingLinkText = "Hello!";
   let contactLinkText = "Contact";
   let portfolioLinkText = "Portfolio";
-
+  console.log(historia, "USE LOCATION");
   const iconStyle = {
     iconFont: {
       fontSize: "20px",
@@ -54,12 +54,14 @@ const NavigationComp = (props) => {
     );
   }
 
-
   if (
     currentPage === "landing" ||
-    window.location.pathname ===
-      ("/" ||
-        "https://88dennis.github.io/portfolio-dennis-sarmiento-react-mern-dev")
+    historia.pathname === "/" 
+    // ||
+    // window.location.pathname ===
+    //   ("/" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com")
   ) {
     toolBarLeftIcon = (
       <i
@@ -72,9 +74,12 @@ const NavigationComp = (props) => {
     nameOfPage = "Hello!";
   } else if (
     currentPage === "home" ||
-    window.location.pathname ===
-      ("/home" ||
-        "https://88dennis.github.io/portfolio-dennis-sarmiento-react-mern-dev/home")
+    historia.pathname === "/home" 
+    // ||
+    // window.location.pathname ===
+    //   ("/home" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/home" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/home/")
   ) {
     toolBarLeftIcon = (
       <i
@@ -87,9 +92,12 @@ const NavigationComp = (props) => {
     nameOfPage = "Home";
   } else if (
     currentPage === "portfolio" ||
-    window.location.pathname ===
-      ("/portfolio" ||
-        "https://88dennis.github.io/portfolio-dennis-sarmiento-react-mern-dev/portfolio")
+    historia.pathname === "/portfolio" 
+    // ||
+    // window.location.pathname ===
+    //   ("/portfolio" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/portfolio" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/portfolio/")
   ) {
     toolBarLeftIcon = (
       <i
@@ -102,9 +110,12 @@ const NavigationComp = (props) => {
     nameOfPage = "Portfolio";
   } else if (
     currentPage === "about" ||
-    window.location.pathname ===
-      ("/about" ||
-        "https://88dennis.github.io/portfolio-dennis-sarmiento-react-mern-dev/about")
+    historia.pathname === "/about" 
+    // ||
+    // window.location.pathname ===
+    //   ("/about" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/about" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/about/")
   ) {
     toolBarLeftIcon = (
       <i
@@ -117,9 +128,12 @@ const NavigationComp = (props) => {
     nameOfPage = "About";
   } else if (
     currentPage === "contact" ||
-    window.location.pathname ===
-      ("/contact" ||
-        "https://88dennis.github.io/portfolio-dennis-sarmiento-react-mern-dev/contact")
+    historia.pathname === "/contact" 
+    // ||
+    // window.location.pathname ===
+    //   ("/contact" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/contact" ||
+    //     "https://portfolio-dennis-mern-dev.herokuapp.com/contact/") 
   ) {
     toolBarLeftIcon = (
       <i
@@ -132,12 +146,8 @@ const NavigationComp = (props) => {
     nameOfPage = "Contact";
   }
 
-
   return (
     <>
-  
-   
-    >
       <Toolbar
         toolBarLeftIcon={toolBarLeftIcon}
         // nameOfPage={!user ? "You are logged out" : nameOfPage}
@@ -150,18 +160,24 @@ const NavigationComp = (props) => {
           <li
             className="toolBarSpanName"
             style={{
-              display: homeLinkText.toLowerCase() === nameOfPage.toLowerCase() ? "none" : "",
+              display:
+                homeLinkText.toLowerCase() === nameOfPage.toLowerCase()
+                  ? "none"
+                  : "",
             }}
           >
             <Link to="/home" onClick={() => handlePageChange("home")}>
               {homeLinkText}
             </Link>
           </li>
-        
+
           <li
             className="toolBarSpanName"
             style={{
-              display: aboutLinkText.toLowerCase() === nameOfPage.toLowerCase() ? "none" : "",
+              display:
+                aboutLinkText.toLowerCase() === nameOfPage.toLowerCase()
+                  ? "none"
+                  : "",
             }}
           >
             <Link to="/about" onClick={() => handlePageChange("about")}>
@@ -172,7 +188,10 @@ const NavigationComp = (props) => {
           <li
             className="toolBarSpanName"
             style={{
-              display: portfolioLinkText.toLowerCase() === nameOfPage.toLowerCase() ? "none" : "",
+              display:
+                portfolioLinkText.toLowerCase() === nameOfPage.toLowerCase()
+                  ? "none"
+                  : "",
             }}
           >
             <Link to="/portfolio" onClick={() => handlePageChange("portfolio")}>
@@ -180,11 +199,13 @@ const NavigationComp = (props) => {
             </Link>
           </li>
 
-
           <li
             className="toolBarSpanName"
             style={{
-              display: contactLinkText.toLowerCase() === nameOfPage.toLowerCase() ? "none" : "",
+              display:
+                contactLinkText.toLowerCase() === nameOfPage.toLowerCase()
+                  ? "none"
+                  : "",
             }}
           >
             <Link to="/contact" onClick={() => handlePageChange("contact")}>
@@ -202,7 +223,6 @@ const NavigationComp = (props) => {
               {landingLinkText}
             </Link>
           </li> */}
-
         </ul>
         {/* <Link to={`/${user.userName}/dashboard`}>
           <button title={!user ? "Login" :"Home"} className="modalButton">
@@ -222,7 +242,6 @@ const NavigationComp = (props) => {
         />
       </SideDrawer>
       {sideDrawerBackdrop}
-   
     </>
   );
 };
